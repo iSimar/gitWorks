@@ -1,0 +1,64 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', './', '--tag', 'empty' ]
+2 info using npm@2.7.5
+3 info using node@v0.12.2
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ './' ]
+6 silly cache add args [ './', null ]
+7 verbose cache add spec ./
+8 silly cache add parsed spec { raw: './',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: './',
+8 silly cache add   spec: '/Users/simarsingh/Documents/Projects/gitWorks',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/simarsingh/.npm/gitWorks/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/simarsingh/.npm/gitWorks/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/simarsingh/Documents/Projects/gitWorks' ]
+11 verbose tarball /Users/simarsingh/.npm/gitWorks/1.0.0/package.tgz
+12 verbose folder /Users/simarsingh/Documents/Projects/gitWorks
+13 info prepublish gitWorks@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/simarsingh/.npm/gitWorks/1.0.0/package.tgz
+15 silly cache afterAdd gitWorks@1.0.0
+16 verbose afterAdd /Users/simarsingh/.npm/gitWorks/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/simarsingh/.npm/gitWorks/1.0.0/package/package.json written
+18 silly publish { name: 'gitWorks',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: '',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository: { type: 'git', url: 'https://github.com/iSimar/gitWorks.git' },
+18 silly publish   author: '',
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/iSimar/gitWorks/issues' },
+18 silly publish   homepage: 'https://github.com/iSimar/gitWorks',
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   _id: 'gitWorks@1.0.0',
+18 silly publish   _shasum: '9c49577e56413cf7ea5f48c0cff776ef8864947c',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name gitWorks
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/gitWorks
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/simarsingh/.npm/gitWorks/1.0.0/package.tgz
+25 verbose stack Error: Invalid name: "gitWorks"
+25 verbose stack     at ensureValidName (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:322:15)
+25 verbose stack     at Object.module.exports.fixNameField (/usr/local/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:211:5)
+25 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:41:11)
+25 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:144:14
+25 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
+25 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:114:3)
+25 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+25 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+25 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+25 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+26 verbose cwd /Users/simarsingh/Documents/Projects/gitWorks
+27 error Darwin 14.1.0
+28 error argv "node" "/usr/local/bin/npm" "publish" "./" "--tag" "empty"
+29 error node v0.12.2
+30 error npm  v2.7.5
+31 error Invalid name: "gitWorks"
+32 error If you need help, you may report this error at:
+32 error     <https://github.com/npm/npm/issues>
+33 verbose exit [ 1, true ]
