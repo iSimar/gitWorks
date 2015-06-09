@@ -1,9 +1,14 @@
+var path = require('path');
+var fs = require('fs');
 var colors = require('colors');
+var exec = require('child_process').exec;
+// var prompt = require('prompt');
 var args = process.argv.splice(2);
 var command = args.shift();
 
 switch(command){
     case 'init':
+        init();
         break;
     case 'help':
         showHelp();
@@ -29,5 +34,22 @@ function showHelp(){
 }
 
 function init(){
-    
+    if (!fs.existsSync('.git/')) { 
+        console.log('ERROR '.red + 'You must initalize git first using \'git init\''.gray);
+    }
+    else{
+        collectGitConfigInfo();
+    }    
+}
+
+function collectGitConfigInfo(){
+    exec('git config user.name', {cwd: process.cwd()}, function(error, stdout, stderr) {
+            var username = stdout;
+            exec('git config user.email', {cwd: process.cwd()}, function(error, stdout, stderr) {
+                var email = stdout;
+                console.log(username);
+                console.log(email);
+            });
+    });
+
 }
