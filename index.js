@@ -9,11 +9,8 @@ function main (args){
                 case 'init':
                     require('./src/cmd_init').main(args);
                     break;
-                case 'help':
-                    showHelp();
-                    break;
                 default:
-                    showHelp();
+                    output.usage();
                     break;
             }
         }
