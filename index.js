@@ -1,5 +1,5 @@
-var output = require('./output');
-var tof = require('./trueORFalse');
+var output = require('./src/output');
+var tof = require('./src/trueORFalse');
 
 function main (args){
     tof.isGitInstalled(function(boolVal){
@@ -7,7 +7,7 @@ function main (args){
             var command = args.shift();
             switch(command){
                 case 'init':
-                    require('./cmd_init').main(args);
+                    require('./src/cmd_init').main(args);
                     break;
                 case 'help':
                     showHelp();
