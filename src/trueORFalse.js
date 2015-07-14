@@ -19,6 +19,6 @@ exports.isGitInitialized = function(callback){
 
 exports.isGitWorksInitialized = function(callback){
 	gitLayer.getProjectRootDirectory(function(val){
-		callback(fs.existsSync(val.slice(0, - 1)+'/.gitWorks'));
+		callback(fs.existsSync(val+'/.gitWorks'));
 	});
 }

@@ -16,7 +16,7 @@ exports.main = function(args){
 	 			else{
 	 				gitWorksLayer.createGitWorksFile(function(){
 	 					gitLayer.getUserConfigInfo(function(userinfo){
-	 						gitWorksLayer.addMember(function(){
+  	 						gitWorksLayer.addMember(userinfo, function(){
 	 							output.success('gitworks has been initalized.');
 	 						});
 	 					});

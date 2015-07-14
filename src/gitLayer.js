@@ -12,7 +12,7 @@ function runCmd(cmd){
 
 function runCmdWithDirectory(cmd, dir, callback){
     exec(cmd, {cwd: dir}, function(error, stdout, stderr) {
-        callback(stdout);
+        callback(stdout.slice(0, - 1));
     });
 }
 
@@ -29,7 +29,15 @@ exports.getUserConfigInfo = function (callback){
             var username = stdout;
             exec('git config user.email', {cwd: process.cwd()}, function(error, stdout, stderr) {
                 var email = stdout;
-                callback({'username': username, 'email':    email});
+                var final_username = username.slice(0, -1);
+                var final_email = email.slice(0, -1);
+                if(final_username==''){
+                    final_username='UNKNOW USERNAME';
+                }
+                if(final_email==''){
+                    final_email='UNKNOWN EMAIL';
+                }
+                callback({'username': final_username, 'email': final_email});
             });
     });
 };
