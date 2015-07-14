@@ -25,5 +25,5 @@ exports.success = function(message){
 }
 
 exports.warning = function(message){
-	console.log('WARNING '.yellow + message.gray);
+	console.log('WARNINGa '.yellow + message.gray);
 }		

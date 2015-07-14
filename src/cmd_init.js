@@ -4,6 +4,9 @@ var gitLayer = require('./gitLayer');
 var gitWorksLayer = require('./gitWorksLayer');
 
 exports.main = function(args){
+	// gitWorksLayer.addMember(function(){
+	//  							output.success('gitworks has been initalized.');
+	//  						});
 	 tof.isGitInitialized(function(boolVal){
 	 	if(boolVal){
 	 		tof.isGitWorksInitialized(function(boolVal){
@@ -12,7 +15,11 @@ exports.main = function(args){
 	 			}
 	 			else{
 	 				gitWorksLayer.createGitWorksFile(function(){
-	 					output.success('gitworks has been initalized.');
+	 					gitLayer.getUserConfigInfo(function(userinfo){
+	 						gitWorksLayer.addMember(function(){
+	 							output.success('gitworks has been initalized.');
+	 						});
+	 					});
 	 				});
 	 			}
     		});

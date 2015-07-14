@@ -24,15 +24,12 @@ exports.getProjectRootDirectory = function(callback){
     runCmdWithDirectory('git rev-parse --show-toplevel', process.cwd(), callback);
 }
 
-exports.getUserConfigInfo = function (){
-	exec('git config user.name', {cwd: process.cwd()}, function(error, stdout, stderr) {
+exports.getUserConfigInfo = function (callback){
+    exec('git config user.name', {cwd: process.cwd()}, function(error, stdout, stderr) {
             var username = stdout;
             exec('git config user.email', {cwd: process.cwd()}, function(error, stdout, stderr) {
-            	var email = stdout;
-            	return {
-            		    'username': username, 
-            			'email':    email
-            		   };
+                var email = stdout;
+                callback({'username': username, 'email':    email});
             });
     });
 };
