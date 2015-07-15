@@ -31,13 +31,13 @@ exports.getUserConfigInfo = function (callback){
                 var email = stdout;
                 var final_username = username.slice(0, -1);
                 var final_email = email.slice(0, -1);
-                if(final_username==''){
-                    final_username='UNKNOW USERNAME';
-                }
-                if(final_email==''){
-                    final_email='UNKNOWN EMAIL';
-                }
                 callback({'username': final_username, 'email': final_email});
             });
+    });
+};
+
+exports.getCurrentUsername = function (callback){
+    exports.getUserConfigInfo(function(userinfo){
+        callback(userinfo.username);
     });
 };

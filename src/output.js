@@ -26,4 +26,12 @@ exports.success = function(message){
 
 exports.warning = function(message){
 	console.log('WARNING '.yellow + message.gray);
-}		
+}
+
+exports.note = function(message){
+	console.log('NOTE '.cyan + message.gray);
+}
+
+exports.log = function(message){
+	console.log('LOG '.blue + message.gray);
+}

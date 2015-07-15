@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/iSimar/gitWorks/issues"
   },
-  "homepage": "https://github.com/iSimar/gitWorks"
+  "homepage": "https://github.com/iSimar/gitWorks",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "console.table": "^0.4.0",
+    "prompt": "^0.2.14"
+  }
 }
