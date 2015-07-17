@@ -10,7 +10,7 @@ gitWorks is a lightweight task management system on top of git.
 | gitworks addme        | adds you as a member if you're not already             |
 
 ###Init
-[](http://zippy.gfycat.com/ScratchyPrestigiousBeardeddragon.gif)
+[init](http://zippy.gfycat.com/ScratchyPrestigiousBeardeddragon.gif)
 
 ###Task
-[](http://zippy.gfycat.com/PoshNewCockroach.gif)
+[task](http://zippy.gfycat.com/PoshNewCockroach.gif)
