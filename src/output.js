@@ -3,17 +3,14 @@
 var colors = require('colors');
 
 exports.usage = function() {
+    console.log();
+    exports.error('Invalid Command');
 	console.log();
-	console.log('                 '+ 'gitWorks Usage'.underline);
-	console.log();
-	console.log('Update:                    '.yellow+'gitWorks update');
-	console.log('Init:                      '.blue+'gitWorks init');
-	console.log('Make New Work Item:        '.yellow+'gitWorks new <description> priority [high|low]');
-	console.log('Items Assigned To/By You:  '.blue+'gitWorks mine');
-	console.log('Items Assigned To Someone: '.yellow+'gitWorks to <name>');
-	console.log('Items Assigned By Someone: '.blue+'gitWorks by <name>');
-	console.log('See All Work Iterms:       '.yellow+'gitWorks all');
-	console.log('Change Status of Work Item:'.blue+'node gitWorks <item id> [working|done]');
+    console.log('Initalize gitWorks:        '.green+'gitWorks init');
+    console.log('Create a Task:             '.green+'gitWorks task -n'+' OR '.yellow+'gitworks task --new');
+	console.log('List all Tasks:            '.green+'gitWorks task -l'+' OR '.yellow+'gitworks task --list');
+	console.log('Add yourself as a Member:  '.green+'gitWorks addme');
+    console.log();
 }
 
 exports.error = function(message){
